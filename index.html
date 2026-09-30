@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reto AR</title>
+
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene xr-mode-ui="XRMode: xr;">
+      <a-entity light="type: ambient; intensity: 1"></a-entity>
+      <a-entity light="type: directional; intensity: 0.8" position="1 1 0"></a-entity>
+
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#999"></a-plane>
+
+
+<a-entity
+  gltf-model="url(me.glb)"
+  rotation="0 0 0"   
+  scale="1 1 1"
+  animation-mixer="clip: *; loop: repeat"
+></a-entity>
+      <a-entity camera look-controls position="0 1.6 3"></a-entity>
+    </a-scene>
+  </body>
+</html>
